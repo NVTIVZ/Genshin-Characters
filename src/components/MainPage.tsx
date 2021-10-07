@@ -1,5 +1,5 @@
 import { useQuery } from 'react-query';
-import { Flex } from '@chakra-ui/layout';
+import { Flex, Heading } from '@chakra-ui/layout';
 import { Image } from '@chakra-ui/image';
 import { useState } from 'react';
 import CharacterDetails from './CharacterDetails';
@@ -29,7 +29,10 @@ const MainPage = () => {
         ''
       )}
       <Image src="/Genshin_Impact_logo.svg" alt="logo" mx={64} />
-      <Flex wrap="wrap" justifyContent="center" mt={24}>
+      <Heading mx="auto" fontSize="5xl" mt={8} color="white">
+        Select a character
+      </Heading>
+      <Flex wrap="wrap" justifyContent="center" mt={12}>
         {data.map((character: string, index: number) => {
           return (
             <Image
