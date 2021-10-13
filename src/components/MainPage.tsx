@@ -10,6 +10,7 @@ const MainPage = () => {
   const { status, data } = useQuery('characters', () =>
     fetch('https://api.genshin.dev/characters').then((res) => res.json())
   );
+
   console.log(status);
   console.info(data);
   console.log(selected);
